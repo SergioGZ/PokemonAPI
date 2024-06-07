@@ -1,0 +1,39 @@
+.card {
+    max-width: 640px;
+    box-shadow: var(--box-shadow);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--c-dark);
+}
+
+.inputFinder {
+    width: 500px;
+}
+
+@media (max-width: 767px) {
+    .card {
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-bottom: 20px;
+    }
+
+    .card img {
+        width: 60%;
+    }
+
+    .inputFinder {
+        width: 75%;
+    }
+}

@@ -1,0 +1,38 @@
+nav {
+    background-color: var(--c-nav);
+}
+
+.nav-link {
+    color: var(--c-brand);
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--c-brand-light);
+}
+
+.btn-subtle {
+    background-color: white;
+    border-radius: 100%;
+    transition: var(--transition);
+}
+
+.btn-subtle:hover {
+    background-color: var(--c-brand-light);
+}
+
+.navbar-toggler {
+    outline: none;
+    background-color: var(--c-brand);
+}
+
+@media (max-width: 991px) {
+    .btn-subtle {
+        display: none;
+    }
+
+    .nav-link {
+        padding-top: 1rem;
+    }
+}
