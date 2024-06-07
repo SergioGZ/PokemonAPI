@@ -18,7 +18,6 @@ function PokemonAPI() {
             } finally {
                 setTimeout(() => {
                     setLoading(false);
-                    document.querySelectorAll('.card').forEach(card => card.classList.add('animate__animated', 'animate__fadeInUp'));
                 }, 500);
             }
         };
@@ -36,7 +35,7 @@ function PokemonAPI() {
     }
 
     return (
-        <div className="card">
+        <div className="card animate__animated animate__fadeInUp">
             <div className="row g-0 bg-light rounded-1">
                 <div className="col-md-4 col-sm-12 bg-danger rounded-1 border border-1 border-dark d-flex justify-content-center align-items-center">
                     <a href={`https://www.pokemon.com/es/pokedex/${pokemon.id}`} target="_blank" rel="noreferrer" className="d-flex justify-content-center align-items-center">
