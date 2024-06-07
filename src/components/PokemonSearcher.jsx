@@ -9,7 +9,7 @@ function PokemonSearcher() {
     const [loading, setLoading] = useState(false);
   
     const handleInputChange = (event) => { // Handle input change
-      setPokemonName(event.target.value.toLowerCase());
+      setPokemonName(event.target.value.toLowerCase()); // Set Pokemon name to lowercase
     };
   
     const searchPokemon = () => { // Search for a Pokemon
