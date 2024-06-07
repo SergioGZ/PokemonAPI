@@ -1,8 +1,7 @@
-import './App.css'
 import Navbar from '../components/Navbar'
 import PokemonCards from '../components/PokemonCards'
 
-function App() {
+function Pokemons() {
 
   return (
     <>
@@ -13,4 +12,4 @@ function App() {
   )
 }
 
-export default App
+export default Pokemons
