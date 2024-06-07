@@ -1,6 +1,7 @@
 import './PokemonAPI.css'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import 'animate.css';
 
 function PokemonAPI() {
     const [pokemon, setPokemon] = useState(false);
@@ -17,6 +18,7 @@ function PokemonAPI() {
             } finally {
                 setTimeout(() => {
                     setLoading(false);
+                    document.querySelectorAll('.card').forEach(card => card.classList.add('animate__animated', 'animate__fadeInUp'));
                 }, 500);
             }
         };
