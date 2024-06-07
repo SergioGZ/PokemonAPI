@@ -5,7 +5,7 @@ function PokemonCards() {
   return (
     <>
       <div className='container py-4'>
-        <div className='row pt-3'>
+        <div className='row pt-2'>
           <div className='col-md-4 offset-md-2 col-sm-12'>
             <PokemonAPI />
           </div>
@@ -13,7 +13,7 @@ function PokemonCards() {
             <PokemonAPI />
           </div>
         </div>
-        <div className='row pt-3'>
+        <div className='row pt-2'>
           <div className='offset-md-2 col-md-4 col-sm-12'>
             <PokemonAPI />
           </div>

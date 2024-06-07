@@ -42,14 +42,13 @@ function PokemonAPI() {
                     </a>
                 </div>
                 <div className="col-md-8 col-sm-12">
-                    <div className="card-body text-center">
+                    <div className="card-body d-flex flex-column justify-content-center align-items-center">
                         <h5 className="card-title">{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h5>
-                        <p className="card-text">
-                            Tipo {pokemon.types[0].type.name.charAt(0).toUpperCase() + pokemon.types[0].type.name.slice(1)}
-                        </p>
-                        <p className="card-text">
-                            <small className="text-muted">Peso: {pokemon.weight} kg</small> 
-                        </p>
+                        <div className="card-text text-center">
+                            <small className="list-group-item text-muted">Tipo: {pokemon.types[0].type.name.charAt(0).toUpperCase() + pokemon.types[0].type.name.slice(1)}{pokemon.types[1] ? `, ${pokemon.types[1].type.name.charAt(0).toUpperCase() + pokemon.types[1].type.name.slice(1)}` : ''}</small>                          
+                            <small className="text-muted">Peso: {pokemon.weight/10} kg</small><br/>
+                            <small className="text-muted">Altura: {pokemon.height/10} m</small>
+                        </div>
                     </div>
                 </div>
             </div>

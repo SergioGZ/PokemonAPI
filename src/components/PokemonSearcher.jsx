@@ -47,8 +47,8 @@ function PokemonSearcher() {
             </div>
           </div>
           <div className="row">
-            <div className="offset-md-3 col-12 col-md-6 d-flex justify-content-center align-items-center flex-column">
-                {loading && ( <div className="spinner-border text-danger" role="status">
+            <div className="col-md-12 col-sm-12 d-flex justify-content-center align-items-center flex-column">
+                {loading && ( <div className="spinner-border text-danger my-4" role="status">
                                 <span className="visually-hidden">Loading...</span>
                               </div>
                             )}
@@ -61,11 +61,12 @@ function PokemonSearcher() {
                     </div>
                     <div className="col-md-8 col-sm-12">
                       <div className="card-body">
-                        <h5 className="card-title">{pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1)}</h5>
-                        <p className="card-text">Tipo: {pokemonData.types[0].type.name.charAt(0).toUpperCase() + pokemonData.types[0].type.name.slice(1)}</p>
-                        <p className="card-text">
-                          <small className="text-muted">Peso: {pokemonData.weight} kg</small>
-                        </p>
+                        <h5 className="card-title text-center">{pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1)}</h5>
+                        <div className="card-text text-center">
+                          <small className="list-group-item text-muted">Tipo: {pokemonData.types[0].type.name.charAt(0).toUpperCase() + pokemonData.types[0].type.name.slice(1)}{pokemonData.types[1] ? `, ${pokemonData.types[1].type.name.charAt(0).toUpperCase() + pokemonData.types[1].type.name.slice(1)}` : ''}</small>                          
+                          <small className="text-muted">Peso: {pokemonData.weight/10} kg</small><br/>
+                          <small className="text-muted">Altura: {pokemonData.height/10} m</small>
+                        </div>
                       </div>
                     </div>
                   </div>
