@@ -5,7 +5,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg">
+      <nav className="navbar navbar-expand-lg sticky-top">
         <div className="container">
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarButtonsExample" aria-expanded="false" >
             <img width="48" height="48" src="https://img.icons8.com/badges/48/xbox-menu.png" alt="Menú"/>
