@@ -35,10 +35,10 @@ function PokemonSearcher() {
           <div className="row d-flex justify-content-center align-items-center">
             <div className="inputFinder">
               <div className="input-group mb-3 pt-5 d-flex justify-content-center align-items-center">
-                <button className="btn btn-danger" type="button" id="button-addon1" onClick={searchPokemon}><strong>Buscar</strong></button>
+                <button className="btn btn-danger border-2 border-dark border-end-0" type="button" id="button-addon1" onClick={searchPokemon}><strong>Buscar</strong></button>
                 <input 
                   type="text" 
-                  className="form-control" 
+                  className="form-control border-2 border-dark" 
                   placeholder="" 
                   value={pokemonName} 
                   onChange={handleInputChange}
@@ -54,18 +54,18 @@ function PokemonSearcher() {
                             )}
               {error && <div className="alert alert-danger" role="alert">{error}</div>}
               {pokemonData && ( // Display Pokemon data
-                <div className="card">
-                  <div className="row g-0 bg-light rounded-1">
+                <div className="card animate__animated animate__fadeInUp border-0">
+                  <div className="row g-0 bg-dark rounded-1">
                     <div className="col-md-4 col-sm-12 d-flex justify-content-center align-items-center bg-danger rounded-1 border border-1 border-dark">
                       <img src={pokemonData.sprites.other['official-artwork'].front_default} className="img-fluid rounded-start" alt="Imagen Pokemon"/>
                     </div>
-                    <div className="col-md-8 col-sm-12">
+                    <div className="col-md-8 col-sm-12 bg-dark rounded-end-1 border border-1 border-dark d-flex justify-content-center align-items-center">
                       <div className="card-body">
                         <h5 className="card-title text-center">{pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1)}</h5>
                         <div className="card-text text-center">
-                          <small className="list-group-item text-muted">Tipo: {pokemonData.types[0].type.name.charAt(0).toUpperCase() + pokemonData.types[0].type.name.slice(1)}{pokemonData.types[1] ? `, ${pokemonData.types[1].type.name.charAt(0).toUpperCase() + pokemonData.types[1].type.name.slice(1)}` : ''}</small>                          
-                          <small className="text-muted">Peso: {pokemonData.weight/10} kg</small><br/>
-                          <small className="text-muted">Altura: {pokemonData.height/10} m</small>
+                          <small className="text-white">Tipo: {pokemonData.types[0].type.name.charAt(0).toUpperCase() + pokemonData.types[0].type.name.slice(1)}{pokemonData.types[1] ? `, ${pokemonData.types[1].type.name.charAt(0).toUpperCase() + pokemonData.types[1].type.name.slice(1)}` : ''}</small><br/>                
+                          <small className="text-white">Peso: {pokemonData.weight/10} kg</small><br/>
+                          <small className="text-white">Altura: {pokemonData.height/10} m</small>
                         </div>
                       </div>
                     </div>
