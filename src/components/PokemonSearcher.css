@@ -1,0 +1,4 @@
+input {
+    max-width: 300px; /* Ajusta esto al tamaño deseado */
+    width: 100%; /* Asegura que el input ocupe el 100% del contenedor */
+    }

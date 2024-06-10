@@ -1,18 +1,24 @@
 import './App.css'
-import Pokemons from './routes/Pokemons'
-import FindPokemon from './routes/FindPokemon'
+import React, { Suspense, lazy } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
+const Pokemons = lazy(() => import('./routes/Pokemons'))
+const FindPokemon = lazy(() => import('./routes/FindPokemon'))
+const Prueba = lazy(() => import('./routes/Prueba'))
+const Navbar = lazy(() => import('./components/Navbar'))
 
 function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Pokemons />} />
-        <Route path="/pokemons" element={<Pokemons />} />
-        <Route path="/findpokemon" element={<FindPokemon />} />
-      </Routes>
+      <Suspense fallback={<Navbar />}>
+        <Routes>
+          <Route path="/" element={<Pokemons />} />
+          <Route path="/pokemons" element={<Pokemons />} />
+          <Route path="/findpokemon" element={<FindPokemon />} />
+          <Route path="/prueba" element={<Prueba />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   )
 }

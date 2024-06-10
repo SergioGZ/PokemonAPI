@@ -4,7 +4,7 @@ import axios from 'axios';
 import 'animate.css';
 
 function PokemonAPI() {
-    const [pokemon, setPokemon] = useState(false);
+    const [pokemon, setPokemon] = useState(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -16,9 +16,7 @@ function PokemonAPI() {
             } catch (error) {
                 console.error(`Error fetching data: ${error}`);
             } finally {
-                setTimeout(() => {
-                    setLoading(false);
-                }, 500);
+                setLoading(false);
             }
         };
 

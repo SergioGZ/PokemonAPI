@@ -1,7 +1,9 @@
 import './Navbar.css'
+import React from 'react'
+import { Link } from 'react-router-dom'
 //import logo from './assets/logo.svg'
 
-function Navbar() {
+const Navbar = React.memo(function Navbar() {
 
   return (
     <>
@@ -16,10 +18,10 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarButtonsExample">
             <ul className="navbar-nav">
               <li className="nav-item px-3">
-                <a className="nav-link" aria-current="page" href="/pokemons">Pokemons</a>
+                <Link className='nav-link' to="/pokemons">Pokemons</Link>
               </li>
               <li className="nav-item px-3">
-                <a className="nav-link" href="/findpokemon">Buscar Pokemon</a>
+                <Link className='nav-link' to="/findpokemon">Buscar Pokemon</Link>
               </li>
             </ul>
             <div className="d-flex align-items-center ms-auto">
@@ -34,6 +36,6 @@ function Navbar() {
       </nav>
     </>
   )
-}
+})
 
 export default Navbar
