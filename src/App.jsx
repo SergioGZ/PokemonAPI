@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const Pokemons = lazy(() => import('./routes/Pokemons'))
 const FindPokemon = lazy(() => import('./routes/FindPokemon'))
-const Prueba = lazy(() => import('./routes/Prueba'))
 const Navbar = lazy(() => import('./components/Navbar'))
 
 function App() {
